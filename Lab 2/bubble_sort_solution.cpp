@@ -18,7 +18,9 @@ void bubble_sort(std::vector<int>& data){
         for(int i = 0; i < data.size() - 1; i++){
             if(data[i] > data[i+1]){
                 sorted = false;
-                swap(data[i], data[i+1]);
+                int temp = data[i];
+                data[i] = data[i+1];
+                data[i+1] = temp;
             }
         }
     } while(!sorted);
