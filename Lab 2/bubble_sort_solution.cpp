@@ -13,17 +13,15 @@ void print_vector(const std::vector<int>& data){
 void bubble_sort(std::vector<int>& data){
     /* TODO: Implement bubble sort */
     bool sorted;
-    do{
+    do {
         sorted = true;
         for(int i = 0; i < data.size() - 1; i++){
             if(data[i] > data[i+1]){
                 sorted = false;
-                int temp = data[i];
-                data[i] = data[i+1];
-                data[i+1] = temp;
+                swap(data[i], data[i+1]);
             }
         }
-    }while(!sorted);
+    } while(!sorted);
 
 }
 
